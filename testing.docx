@@ -1,0 +1,228 @@
+# Testing Documentation
+## Academic Integrity & Similarity Case Management System
+
+### 1. Introduction
+
+Testing is an important part of the Academic Integrity & Similarity Case Management System.
+
+The purpose of testing is to verify that the application's business rules, services and workflows behave correctly.
+
+The backend uses **Pytest**, a Python testing framework, to execute automated tests.
+
+The testing process focuses on similarity rules, reviewer conflicts, case lifecycle management and appeal processing.
+
+### 2. Testing Objectives
+
+The main objectives are:
+
+- Verify that similarity rules work correctly.
+- Ensure reviewers with conflicts are not assigned to cases.
+- Validate case lifecycle transitions.
+- Ensure appeals receive independent review.
+- Verify that invalid operations are rejected.
+- Identify errors before deploying the application.
+- Maintain reliable and repeatable test execution.
+
+### 3. Testing Framework and Tools
+
+| Tool | Purpose |
+|---|---|
+| Python | Backend programming language |
+| Pytest | Automated testing framework |
+| SQLite | Temporary database for the reported full-suite run |
+| FastAPI | Backend API framework |
+| SQLAlchemy | Database interaction |
+
+### 4. Testing Architecture
+
+The testing process follows this structure:
+
+Test Cases  
+↓  
+Pytest  
+↓  
+Existing Application Services and Business Rules  
+↓  
+Assertions and Validation  
+↓  
+Test Results
+
+Tests are written against the project's existing services rather than creating duplicate business logic.
+
+### 5. Unit Testing Modules
+
+#### 5.1 Similarity Testing
+
+**File:** `tests/test_business_rules_unit.py`
+
+The similarity tests verify the existing similarity service and integrity-rule behavior.
+
+Test scenarios include:
+
+- Processing similarity information.
+- Checking configured similarity thresholds.
+- Verifying when a submission requires review.
+- Checking boundary conditions.
+- Handling invalid similarity information.
+
+Expected behavior:
+
+The system should identify submissions requiring human review according to configured rules. A similarity flag must not automatically establish academic misconduct.
+
+#### 5.2 Reviewer Conflict Testing
+
+**File:** `tests/test_business_rules_unit.py`
+
+This module tests reviewer conflict-of-interest rules.
+
+Test scenarios include:
+
+- Assigning a reviewer without a conflict.
+- Preventing assignment when a conflict exists.
+- Validating reviewer assignment conditions.
+
+Expected behavior:
+
+A reviewer with a detected conflict should not be assigned to the affected investigation.
+
+#### 5.3 Case Lifecycle Testing
+
+**File:** `tests/test_business_rules_unit.py`
+
+Case lifecycle tests verify the existing case transition rules.
+
+Test scenarios include:
+
+- Valid case status transitions.
+- Invalid case status transitions.
+- Checking case closure conditions.
+- Ensuring required investigation steps are completed.
+
+Expected behavior:
+
+Cases should follow permitted lifecycle transitions. A case should not be closed when required decision conditions have not been satisfied.
+
+#### 5.4 Appeal Testing
+
+**File:** `tests/test_business_rules_unit.py`
+
+Appeal tests verify the appeal lifecycle and independent-review requirements.
+
+Test scenarios include:
+
+- Checking appeal review conditions.
+- Preventing closure without independent review.
+- Validating appeal resolution.
+- Checking permitted appeal transitions.
+
+Expected behavior:
+
+An appeal must receive the required independent review before it can be closed.
+
+### 6. Test Fixture Improvement
+
+**File:** `tests/test_cases.py`
+
+During full-suite testing, one case-assignment test depended on an active reviewer already existing in the database.
+
+This caused a failure when the test ran against an empty database.
+
+The test fixture was updated to create its own reviewer when necessary.
+
+**Improvement:**
+
+- Tests are less dependent on existing database records.
+- The case-assignment test can run against a fresh database.
+- Test execution becomes more repeatable.
+- The test environment becomes more self-contained.
+
+### 7. Test Execution
+
+The backend tests were executed from the backend directory.
+
+**Run all backend tests:**
+
+```powershell
+python -m pytest tests -q
+```
+
+**Run the focused business-rule tests:**
+
+```powershell
+python -m pytest tests/test_business_rules_unit.py -q
+```
+
+**Run the case-management tests:**
+
+```powershell
+python -m pytest tests/test_cases.py -q
+```
+
+**Run tests with detailed output:**
+
+```powershell
+python -m pytest tests -v
+```
+
+### 8. Test Database Safety
+
+The full backend test suite was executed using a newly created temporary SQLite database.
+
+The test process:
+
+1. Created a unique temporary database.
+2. Configured the test environment to use SQLite.
+3. Executed the backend test suite.
+4. Captured the test exit status.
+5. Removed the temporary database after execution.
+
+The development database was not used for this reported test run.
+
+### 9. Testing Results
+
+**Reported final backend test result:**
+
+| Metric | Result |
+|---|---:|
+| Total passed tests | 123 |
+| Failed tests | 0 |
+| New isolated business-rule tests | 24 |
+| Test framework | Pytest |
+| Test database | Temporary SQLite |
+
+**Result:** All 123 backend tests passed in the reported final run.
+
+The 24 new isolated tests cover similarity processing, reviewer conflicts, case lifecycle rules and independent appeal resolution.
+
+### 10. Files Added or Updated
+
+| File | Change |
+|---|---|
+| `tests/test_business_rules_unit.py` | Added 24 isolated unit tests |
+| `tests/test_cases.py` | Improved reviewer test fixture |
+| `README.md` | Recorded testing results |
+
+### 11. Importance of Unit Testing
+
+Unit testing helps identify errors in individual business rules before they affect the complete application.
+
+For example:
+
+- Similarity testing prevents incorrect threshold behavior.
+- Reviewer conflict testing prevents inappropriate reviewer assignments.
+- Case lifecycle testing prevents invalid case transitions.
+- Appeal testing protects independent review requirements.
+
+This improves application reliability and makes future code changes safer.
+
+### 12. Conclusion
+
+Automated testing was implemented using Pytest for the Academic Integrity & Similarity Case Management System.
+
+The testing process covered the main business rules related to similarity analysis, reviewer conflicts, case lifecycle management and appeals.
+
+The test suite was executed using a temporary SQLite database to avoid modifying development data.
+
+The reported final result was 123 passing backend tests, including 24 newly added isolated business-rule tests.
+
+Testing helps ensure that the system follows its business requirements and supports a transparent and traceable academic integrity investigation process.

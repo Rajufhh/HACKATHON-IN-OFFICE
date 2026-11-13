@@ -1,0 +1,782 @@
+# Academic Integrity & Similarity Case Management System
+
+## Complete Project Documentation
+
+**Technology Stack:** React, TypeScript, Vite, Python, FastAPI, SQLAlchemy, MySQL, Pydantic and Pytest.
+
+---
+
+# 1. Introduction
+
+The Academic Integrity & Similarity Case Management System is a web-based application designed to help educational institutions manage academic integrity investigations.
+
+Educational institutions receive student assignments and need to identify possible similarities between submissions. However, a high similarity score does not necessarily mean academic misconduct.
+
+The system helps institutions manage the complete investigation process, including:
+
+- Student assignment submissions.
+- Similarity reports and flags.
+- Investigation case creation.
+- Reviewer assignment.
+- Conflict-of-interest checking.
+- Evidence collection.
+- Investigation decisions.
+- Student appeals.
+- Case and appeal history.
+
+The main goal is to provide a transparent, organized and traceable investigation process.
+
+# 2. Problem Statement
+
+Educational institutions may face difficulties managing academic integrity investigations manually.
+
+Common problems include:
+
+1. Difficulty tracking similarity reports.
+2. Missing or incomplete investigation evidence.
+3. Incorrect reviewer assignments.
+4. Lack of investigation history.
+5. Decisions without proper supporting evidence.
+6. Difficulty managing student appeals.
+7. Lack of transparency in the investigation process.
+
+A centralized system is required to manage these activities and maintain proper records.
+
+# 3. Project Objectives
+
+The primary objectives are:
+
+- Develop an end-to-end academic integrity management system.
+- Manage students, assessments and submissions.
+- Generate and track similarity reports.
+- Identify submissions requiring manual review.
+- Assign reviewers to investigation cases.
+- Prevent reviewer conflicts of interest.
+- Maintain evidence and decision records.
+- Support independent appeal reviews.
+- Preserve historical changes.
+- Generate measurable reports and outcomes.
+
+# 4. Scope of the Project
+
+The project covers the following modules:
+
+1. Master Data Management
+2. Submission Management
+3. Similarity Detection and Reporting
+4. Integrity Flag Management
+5. Case Management
+6. Reviewer Management
+7. Evidence Management
+8. Decision Management
+9. Appeal Management
+10. Dashboard and Reporting
+11. Synthetic Data Generation and Validation
+
+# 5. Users and Actors
+
+The system supports different user roles.
+
+| User | Responsibility |
+|---|---|
+| Learner | Submits assignments and raises appeals |
+| Instructor | Manages assessments and academic submissions |
+| Academic Administrator | Manages investigation activities |
+| Reviewer | Reviews evidence and records decisions |
+| Support Staff | Helps with operational activities |
+| Platform Administrator | Manages system configuration and access |
+
+The exact permissions depend on the implemented authorization rules.
+
+# 6. Technology Stack
+
+## Frontend
+
+**React**
+
+Used to develop the user interface and reusable components.
+
+**TypeScript**
+
+Provides static type checking and improves code reliability.
+
+**Vite**
+
+Used as the frontend development and build tool.
+
+## Backend
+
+**Python**
+
+Used for backend business logic and application development.
+
+**FastAPI**
+
+Provides REST APIs and handles frontend communication.
+
+**SQLAlchemy**
+
+Used as the Object Relational Mapper (ORM) to interact with the database.
+
+**Pydantic**
+
+Used for request and response data validation.
+
+## Database
+
+**MySQL**
+
+Stores learners, assessments, submissions, reports, flags, cases, reviewers, evidence, decisions and appeals.
+
+## Testing
+
+**Pytest**
+
+Used to test backend functionality, business rules, validations and workflows.
+
+# 7. System Architecture
+
+The application follows a modular monolithic architecture.
+
+The frontend communicates with the backend using HTTP APIs. The backend contains business logic and accesses MySQL through SQLAlchemy.
+
+### Architecture flow
+
+React + TypeScript Frontend  
+↓  
+HTTP / REST API  
+↓  
+FastAPI Backend  
+↓  
+Application Services and Business Rules  
+↓  
+SQLAlchemy ORM  
+↓  
+MySQL Database
+
+### Backend modules
+
+- Models: Database table definitions.
+- Schemas: Request and response validation.
+- Routes: API endpoints.
+- Services: Business logic.
+- Database: Database connection and session management.
+- Tests: Automated testing.
+
+This modular structure separates responsibilities and makes the application easier to maintain.
+
+# 8. Database Architecture
+
+The project uses a relational database design.
+
+The database contains multiple related entities connected using primary keys and foreign keys.
+
+## 8.1 Master Data Tables
+
+### Learner
+
+Stores student information.
+
+Example fields may include:
+- learner_id
+- learner_name
+- email
+- department
+
+### Assessment
+
+Stores assignment and examination details.
+
+Example fields:
+- assessment_id
+- assessment_name
+- description
+- due_date
+
+### Reviewer
+
+Stores information about faculty members or investigation reviewers.
+
+### Integrity Rule
+
+Stores configured rules and thresholds used to identify submissions requiring investigation.
+
+## 8.2 Submission and Similarity Tables
+
+### Submission
+
+Stores student assignment submissions.
+
+### Similarity Report
+
+Stores similarity analysis results associated with submissions.
+
+### Similarity Match
+
+Stores information about matched content or reference sources.
+
+### Flag
+
+Stores alerts generated when submissions meet configured review conditions.
+
+## 8.3 Case Management Tables
+
+### Case
+
+Stores the main investigation information.
+
+### Case Flag
+
+Connects investigation cases with relevant flags.
+
+### Case Assignment
+
+Stores reviewer assignment information.
+
+### Case Event
+
+Records changes in case status and important activities.
+
+### Reviewer Conflict
+
+Stores reviewer conflict-of-interest information.
+
+## 8.4 Evidence and Decision Tables
+
+### Evidence Item
+
+Stores evidence references and associated metadata.
+
+### Decision Evidence
+
+Connects evidence with investigation decisions.
+
+### Case Decision
+
+Stores investigation outcomes and the reviewer's rationale.
+
+## 8.5 Appeal Tables
+
+### Appeal
+
+Stores student appeal requests.
+
+### Appeal Evidence
+
+Connects supporting evidence with appeals.
+
+### Appeal Event
+
+Maintains the history of appeal status changes.
+
+## 8.6 Database Relationships
+
+| Relationship | Cardinality |
+|---|---|
+| Learner to Submission | One-to-Many |
+| Assessment to Submission | One-to-Many |
+| Submission to Similarity Report | One-to-Many, if report history is retained |
+| Submission to Flag | One-to-Many |
+| Case to Case Flag | One-to-Many |
+| Reviewer to Case Assignment | One-to-Many |
+| Case to Case Assignment | One-to-Many |
+| Case to Appeal | One-to-Many |
+| Appeal to Appeal Evidence | One-to-Many |
+
+The actual database constraints and cardinalities should be confirmed against the SQLAlchemy models.
+
+# 9. Module Descriptions
+
+## 9.1 Master Data Management
+
+This module manages the basic records required by the application.
+
+It creates and maintains learners, assessments, reviewers and integrity rules.
+
+Other modules use these records through their foreign-key relationships.
+
+## 9.2 Submission Management
+
+This module manages student assignment submissions.
+
+Responsibilities include:
+
+- Creating submission records.
+- Connecting submissions with learners.
+- Connecting submissions with assessments.
+- Tracking submission information.
+- Validating related records.
+
+## 9.3 Similarity Detection and Reporting
+
+This module manages similarity analysis results.
+
+The system records similarity scores and matching information.
+
+Example:
+
+A submission receives a similarity score of 78%.
+
+The system checks the configured integrity rules to determine whether the submission should be reviewed.
+
+A similarity score is an indicator, not proof of academic misconduct.
+
+## 9.4 Flag Management
+
+A flag represents a submission that requires attention.
+
+The system records flags and their relationships with submissions.
+
+Flags can be associated with investigation cases.
+
+## 9.5 Case Management
+
+This module manages investigations.
+
+Responsibilities include:
+
+- Creating cases.
+- Connecting flags to cases.
+- Managing case status.
+- Assigning reviewers.
+- Recording case events.
+- Tracking investigation progress.
+
+## 9.6 Reviewer Management
+
+This module manages investigation reviewers.
+
+Before assigning a reviewer, the system should check for conflicts of interest.
+
+For example, a reviewer should not investigate a case involving a student with whom they have a relevant conflict.
+
+## 9.7 Evidence Management
+
+This module stores investigation evidence references and metadata.
+
+Evidence can include:
+
+- Similarity reports.
+- Assignment references.
+- Supporting documents.
+- Reviewer observations.
+
+Evidence relationships are maintained so decisions can be traced back to their supporting information.
+
+## 9.8 Decision Management
+
+The reviewer examines the available information and records a decision.
+
+The decision should contain:
+
+- Decision status.
+- Decision rationale.
+- Relevant evidence.
+- Decision timestamp.
+
+A similarity score alone should never automatically determine guilt.
+
+## 9.9 Appeal Management
+
+This module allows a student to challenge an investigation decision.
+
+The appeal workflow includes:
+
+1. Appeal submission.
+2. Appeal evidence collection.
+3. Independent review.
+4. Appeal outcome.
+5. Appeal history.
+
+The original investigation record should remain traceable after an appeal.
+
+## 9.10 Dashboard and Reporting
+
+The dashboard provides an overview of important system information.
+
+Possible metrics include:
+
+- Total learners.
+- Total submissions.
+- Total similarity flags.
+- Open investigation cases.
+- Pending decisions.
+- Appeal statistics.
+- Case status distribution.
+
+Metrics should be calculated from operational records rather than independently generated values.
+
+# 10. End-to-End Business Workflow
+
+The complete business process works as follows.
+
+### Step 1: Master Data Creation
+
+Create learner, assessment, reviewer and integrity rule records.
+
+### Step 2: Assignment Submission
+
+The learner submits an assignment.
+
+The system stores the submission and its related identifiers.
+
+### Step 3: Similarity Analysis
+
+The system generates or receives similarity analysis information.
+
+A similarity report is created.
+
+### Step 4: Flag Generation
+
+The system checks configured rules.
+
+If the submission requires review, a flag is generated.
+
+### Step 5: Case Creation
+
+An investigation case is created and connected to the relevant flag.
+
+### Step 6: Reviewer Assignment
+
+A reviewer is assigned after checking conflict-of-interest conditions.
+
+### Step 7: Evidence Collection
+
+The reviewer examines the available evidence.
+
+Evidence references are recorded.
+
+### Step 8: Decision Recording
+
+The reviewer records a decision and provides a rationale.
+
+### Step 9: Appeal Submission
+
+The learner may challenge the decision by submitting an appeal.
+
+### Step 10: Independent Appeal Review
+
+An independent reviewer examines the appeal and supporting evidence.
+
+### Step 11: Case Closure
+
+The case is closed according to the permitted lifecycle rules.
+
+### Step 12: History and Reporting
+
+Important activities are retained as events and used for reporting.
+
+# 11. Important Business Rules
+
+The application should enforce the following business rules.
+
+1. A submission must reference a valid learner and assessment.
+2. A similarity report must reference a valid submission.
+3. A flag must be associated with a valid submission.
+4. A case must have valid related records.
+5. A reviewer must be checked for conflicts before assignment.
+6. Decisions must contain appropriate rationale.
+7. Evidence must be traceable.
+8. Appeals must reference valid cases.
+9. Appeal review must follow the independent-review requirement.
+10. Case and appeal lifecycle transitions must be validated.
+11. Important changes must be recorded as events.
+12. Similarity scores must not automatically establish guilt.
+
+# 12. API Architecture
+
+The backend exposes REST APIs through FastAPI.
+
+API responsibilities are divided into modules.
+
+Examples of API resource groups include:
+
+| Resource | Responsibility |
+|---|---|
+| Learners | Learner management |
+| Assessments | Assessment management |
+| Submissions | Assignment submissions |
+| Similarity | Reports and similarity matches |
+| Flags | Review alerts |
+| Cases | Investigation management |
+| Reviewers | Reviewer information |
+| Evidence | Evidence management |
+| Decisions | Investigation decisions |
+| Appeals | Appeal management |
+| Dashboard | Overview and reporting |
+
+The exact URL paths and HTTP methods should be documented from the actual FastAPI route definitions.
+
+Common HTTP methods include:
+
+- GET: Retrieve records.
+- POST: Create records.
+- PUT/PATCH: Update records.
+- DELETE: Delete records when permitted.
+
+# 13. Frontend Architecture
+
+The frontend is developed using React and TypeScript.
+
+The frontend is responsible for:
+
+- Displaying application pages.
+- Collecting user input.
+- Validating form data.
+- Calling backend APIs.
+- Displaying responses.
+- Showing errors and status messages.
+- Displaying dashboard information.
+
+The frontend communicates with FastAPI through HTTP requests.
+
+# 14. CORS Configuration
+
+CORS stands for Cross-Origin Resource Sharing.
+
+During development, the React frontend and FastAPI backend run on different ports.
+
+Example:
+
+- React frontend: localhost:5173
+- FastAPI backend: localhost:8000
+
+Since the origins differ, the backend must provide appropriate CORS headers.
+
+FastAPI uses CORSMiddleware to configure permitted frontend origins, methods and headers.
+
+Production deployments should allow only trusted frontend origins.
+
+# 15. Data Generation
+
+The project includes a synthetic-data requirement for testing and evaluation.
+
+The target dataset specification includes:
+
+- 10,000 submissions.
+- 1,000 flags.
+- 300 investigation cases.
+- 1,500 learners.
+- 30 assessments.
+- 43 reviewers.
+- Fixed random seed: 20261022.
+
+The generator should create parent records before dependent records.
+
+For example, learners and assessments must exist before submissions are generated.
+
+Dependent records should reference valid parent IDs.
+
+Synthetic records should represent realistic scenarios, including:
+
+- Legitimate quotations.
+- Shared templates.
+- False positives.
+- Multiple reviewers.
+- Successful appeals.
+
+These are dataset targets from the project specification; the actual generated counts should be confirmed using the latest generator output.
+
+# 16. Special Anomaly Scenarios
+
+The project requires four deliberately labelled anomaly scenarios.
+
+### Anomaly 1: Automatic Guilt
+
+A similarity flag is automatically treated as proof of guilt.
+
+This is incorrect because a flag should trigger investigation, not establish guilt.
+
+### Anomaly 2: Reviewer Conflict
+
+A reviewer with a conflict of interest is assigned to a case.
+
+This tests reviewer conflict validation.
+
+### Anomaly 3: Evidence Added After Decision
+
+Evidence is added after a decision without recording the history.
+
+This tests audit and traceability requirements.
+
+### Anomaly 4: Appeal Closed Without Independent Review
+
+An appeal is closed without an independent review.
+
+This tests appeal workflow enforcement.
+
+These anomalies should be labelled using fields such as issue_type and ground_truth.
+
+# 17. Data Validation
+
+The system should validate:
+
+- Primary-key uniqueness.
+- Foreign-key integrity.
+- Required fields.
+- Valid status values.
+- Date ordering.
+- Lifecycle transitions.
+- Duplicate records.
+- Relationship consistency.
+- Evidence and decision references.
+- Appeal workflow requirements.
+
+Data validation ensures that records are consistent and meaningful.
+
+# 18. Audit and Traceability
+
+Audit history is an important part of the project.
+
+The system should not silently overwrite important investigation information.
+
+Instead, important changes should be recorded as explicit events.
+
+Examples:
+
+- Case created.
+- Reviewer assigned.
+- Evidence added.
+- Decision recorded.
+- Appeal submitted.
+- Appeal reviewed.
+- Case closed.
+
+This makes it possible to understand who performed an action and when it occurred, subject to the audit fields implemented.
+
+# 19. Testing Strategy
+
+Pytest is used for backend testing.
+
+Testing should cover the following areas:
+
+### Unit Testing
+
+Tests individual functions and business rules.
+
+### API Testing
+
+Tests backend endpoints and their responses.
+
+### Database Testing
+
+Tests record creation, retrieval, updates and relationships.
+
+### Workflow Testing
+
+Tests complete business workflows, including case creation and appeals.
+
+### Validation Testing
+
+Tests invalid inputs and prohibited state transitions.
+
+### Anomaly Testing
+
+Tests the four deliberately labelled anomaly scenarios.
+
+The project has previously had reported test-suite results, but the latest passing test count should be confirmed by running the test suite on the current code.
+
+# 20. Installation and Execution
+
+The following is a general development setup. Exact commands may differ depending on the current repository structure.
+
+## Prerequisites
+
+- Python.
+- Node.js and npm.
+- MySQL Server.
+- VS Code.
+- Git.
+
+## Backend setup
+
+1. Open the backend folder.
+2. Create a Python virtual environment.
+3. Activate the environment.
+4. Install dependencies from the project's requirements file.
+5. Configure database connection variables.
+6. Create or initialize the database using the project's setup scripts.
+7. Start the FastAPI application using the project's configured entry point.
+
+## Frontend setup
+
+1. Open the frontend folder.
+2. Install dependencies using npm.
+3. Configure the backend API base URL.
+4. Start the Vite development server.
+5. Open the frontend in a browser.
+
+## Testing
+
+Run the backend test suite using the project's configured Pytest command.
+
+The exact commands and environment variables should be taken from the current repository's README and configuration files.
+
+# 21. Security Considerations
+
+Important security considerations include:
+
+- Secure database credentials.
+- Avoid exposing secret values in Git repositories.
+- Validate incoming API data.
+- Restrict access based on user roles.
+- Protect sensitive student information.
+- Validate uploaded files.
+- Maintain reliable audit records.
+- Use HTTPS in production.
+- Restrict CORS to trusted origins.
+- Apply appropriate database permissions.
+
+# 22. Limitations
+
+Potential limitations and areas requiring further implementation or verification include:
+
+1. Real-world similarity detection integration.
+2. Authentication and role-based authorization.
+3. Production deployment and monitoring.
+4. Database migration management.
+5. Large-scale performance testing.
+6. Secure file storage.
+7. Integration with institutional learning management systems.
+
+These should be distinguished from features already implemented in the current code.
+
+# 23. Future Enhancements
+
+Possible future improvements include:
+
+- Integration with established plagiarism detection services.
+- Advanced similarity analysis.
+- Role-based dashboards.
+- Email notifications.
+- Secure evidence file storage.
+- Advanced analytics.
+- Automated report generation.
+- Institutional LMS integration.
+- Database migration automation.
+- Production monitoring and logging.
+
+# 24. Expected Project Outcomes
+
+The expected outcomes are:
+
+- Centralized investigation management.
+- Better organization of similarity reports.
+- Consistent reviewer assignment.
+- Evidence-based decision recording.
+- Transparent appeal management.
+- Improved auditability.
+- Reliable synthetic datasets for testing.
+- Measurable investigation and appeal outcomes.
+
+# 25. Conclusion
+
+The Academic Integrity & Similarity Case Management System provides a structured approach to managing academic integrity investigations.
+
+It connects assignment submissions, similarity reports, flags, investigation cases, reviewers, evidence, decisions and appeals in one application.
+
+The most important principle is that a similarity flag should initiate a fair investigation rather than automatically establish misconduct.
+
+The system emphasizes proper validation, traceability, reviewer independence and transparent decision-making.
+
+Through this project, practical knowledge is applied in full-stack development, REST API design, relational database architecture, backend business logic, data validation and automated testing.
