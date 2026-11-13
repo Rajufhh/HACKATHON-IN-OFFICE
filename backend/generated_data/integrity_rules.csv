@@ -1,0 +1,5 @@
+id,rule_code,rule_name,min_similarity,max_similarity,action,description,created_at
+1,INT-2026-000001,Informational similarity,0,19,INFORMATION,Scores 0-19 trigger INFORMATION; a flag requests human review and never establishes misconduct.,2025-01-02 09:00:00
+2,INT-2026-000002,Low similarity,20,39,INFORMATION,Scores 20-39 trigger INFORMATION; a flag requests human review and never establishes misconduct.,2025-01-03 09:00:00
+3,INT-2026-000003,Review required,40,69,REVIEW,Scores 40-69 trigger REVIEW; a flag requests human review and never establishes misconduct.,2025-01-04 09:00:00
+4,INT-2026-000004,Priority review,70,100,PRIORITY_REVIEW,Scores 70-100 trigger PRIORITY_REVIEW; a flag requests human review and never establishes misconduct.,2025-01-05 09:00:00

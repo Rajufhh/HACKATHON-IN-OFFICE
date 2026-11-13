@@ -1,0 +1,31 @@
+id,reviewer_code,full_name,email,department,specialization,max_active_cases,status,created_at
+1,REV-2026-000001,Synthetic Reviewer 001,reviewer-001@example.invalid,Computer Science,Similarity review,25,ACTIVE,2025-10-04 09:00:00
+2,REV-2026-000002,Synthetic Reviewer 002,reviewer-002@example.invalid,Mathematics,Evidence review,25,ACTIVE,2025-10-05 09:00:00
+3,REV-2026-000003,Synthetic Reviewer 003,reviewer-003@example.invalid,Engineering,Appeals,25,ACTIVE,2025-10-06 09:00:00
+4,REV-2026-000004,Synthetic Reviewer 004,reviewer-004@example.invalid,Computer Science,Similarity review,25,ACTIVE,2025-10-07 09:00:00
+5,REV-2026-000005,Synthetic Reviewer 005,reviewer-005@example.invalid,Mathematics,Evidence review,25,ACTIVE,2025-10-08 09:00:00
+6,REV-2026-000006,Synthetic Reviewer 006,reviewer-006@example.invalid,Engineering,Appeals,25,ACTIVE,2025-10-09 09:00:00
+7,REV-2026-000007,Synthetic Reviewer 007,reviewer-007@example.invalid,Computer Science,Similarity review,25,ACTIVE,2025-10-10 09:00:00
+8,REV-2026-000008,Synthetic Reviewer 008,reviewer-008@example.invalid,Mathematics,Evidence review,25,ACTIVE,2025-10-11 09:00:00
+9,REV-2026-000009,Synthetic Reviewer 009,reviewer-009@example.invalid,Engineering,Appeals,25,ACTIVE,2025-10-12 09:00:00
+10,REV-2026-000010,Synthetic Reviewer 010,reviewer-010@example.invalid,Computer Science,Similarity review,25,ACTIVE,2025-10-13 09:00:00
+11,REV-2026-000011,Synthetic Reviewer 011,reviewer-011@example.invalid,Mathematics,Evidence review,25,ACTIVE,2025-10-14 09:00:00
+12,REV-2026-000012,Synthetic Reviewer 012,reviewer-012@example.invalid,Engineering,Appeals,25,ACTIVE,2025-10-15 09:00:00
+13,REV-2026-000013,Synthetic Reviewer 013,reviewer-013@example.invalid,Computer Science,Similarity review,25,ACTIVE,2025-10-16 09:00:00
+14,REV-2026-000014,Synthetic Reviewer 014,reviewer-014@example.invalid,Mathematics,Evidence review,25,ACTIVE,2025-10-17 09:00:00
+15,REV-2026-000015,Synthetic Reviewer 015,reviewer-015@example.invalid,Engineering,Appeals,25,ACTIVE,2025-10-18 09:00:00
+16,REV-2026-000016,Synthetic Reviewer 016,reviewer-016@example.invalid,Computer Science,Similarity review,25,ACTIVE,2025-10-19 09:00:00
+17,REV-2026-000017,Synthetic Reviewer 017,reviewer-017@example.invalid,Mathematics,Evidence review,25,ACTIVE,2025-10-20 09:00:00
+18,REV-2026-000018,Synthetic Reviewer 018,reviewer-018@example.invalid,Engineering,Appeals,25,ACTIVE,2025-10-21 09:00:00
+19,REV-2026-000019,Synthetic Reviewer 019,reviewer-019@example.invalid,Computer Science,Similarity review,25,ACTIVE,2025-10-22 09:00:00
+20,REV-2026-000020,Synthetic Reviewer 020,reviewer-020@example.invalid,Mathematics,Evidence review,25,ACTIVE,2025-10-23 09:00:00
+21,REV-2026-000021,Synthetic Reviewer 021,reviewer-021@example.invalid,Engineering,Appeals,25,ACTIVE,2025-10-24 09:00:00
+22,REV-2026-000022,Synthetic Reviewer 022,reviewer-022@example.invalid,Computer Science,Similarity review,25,ACTIVE,2025-10-25 09:00:00
+23,REV-2026-000023,Synthetic Reviewer 023,reviewer-023@example.invalid,Mathematics,Evidence review,25,ACTIVE,2025-10-26 09:00:00
+24,REV-2026-000024,Synthetic Reviewer 024,reviewer-024@example.invalid,Engineering,Appeals,25,ACTIVE,2025-10-27 09:00:00
+25,REV-2026-000025,Synthetic Reviewer 025,reviewer-025@example.invalid,Computer Science,Similarity review,10,ON_LEAVE,2025-10-28 09:00:00
+26,REV-2026-000026,Synthetic Reviewer 026,reviewer-026@example.invalid,Mathematics,Evidence review,10,ON_LEAVE,2025-10-29 09:00:00
+27,REV-2026-000027,Synthetic Reviewer 027,reviewer-027@example.invalid,Engineering,Appeals,10,ON_LEAVE,2025-10-30 09:00:00
+28,REV-2026-000028,Synthetic Reviewer 028,reviewer-028@example.invalid,Computer Science,Similarity review,10,ON_LEAVE,2025-10-31 09:00:00
+29,REV-2026-000029,Synthetic Reviewer 029,reviewer-029@example.invalid,Mathematics,Evidence review,10,INACTIVE,2025-11-01 09:00:00
+30,REV-2026-000030,Synthetic Reviewer 030,reviewer-030@example.invalid,Engineering,Appeals,10,INACTIVE,2025-11-02 09:00:00

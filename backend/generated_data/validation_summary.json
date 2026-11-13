@@ -1,0 +1,55 @@
+{
+  "errors": [],
+  "metrics": {
+    "expected_anomaly_count": 4,
+    "expected_anomaly_types": [
+      "APPEAL_CLOSED_WITHOUT_INDEPENDENT_REVIEW",
+      "EVIDENCE_AFTER_DECISION_WITHOUT_HISTORY",
+      "FLAG_TREATED_AS_GUILT",
+      "REVIEWER_CONFLICT"
+    ],
+    "flagged_legitimate_overlap_count": 488,
+    "review_action_distribution": {
+      "INFORMATION": 9000,
+      "PRIORITY_REVIEW": 228,
+      "REVIEW": 772
+    },
+    "successful_appeal_count": 49
+  },
+  "row_counts": {
+    "appeal_events": 166,
+    "appeal_evidence": 120,
+    "appeals": 60,
+    "assessments": 25,
+    "case_assignments": 300,
+    "case_decisions": 300,
+    "case_events": 2401,
+    "case_flags": 300,
+    "cases": 300,
+    "decision_evidence": 600,
+    "evidence_items": 601,
+    "flags": 1000,
+    "integrity_rules": 4,
+    "learners": 2500,
+    "reviewer_conflicts": 31,
+    "reviewers": 30,
+    "similarity_matches": 30000,
+    "similarity_reports": 10000,
+    "submissions": 10000
+  },
+  "status": "PASS_WITH_EXPECTED_ANOMALIES",
+  "validation_checks": [
+    "row counts, primary-key uniqueness, and business-code uniqueness",
+    "foreign-key and bridge-table integrity",
+    "allowed enum values",
+    "assessment, submission, review, decision, and appeal date ordering",
+    "threshold-to-flag reconciliation and rule actions",
+    "similarity report and source component arithmetic",
+    "case-to-submission learner joins",
+    "decision evidence ownership and chronology",
+    "case and appeal event chronology and lifecycle consistency",
+    "independent appeal reviewer assignment",
+    "ground-truth-labelled anomaly materialization",
+    "successful appeal for a labelled legitimate-overlap false positive"
+  ]
+}

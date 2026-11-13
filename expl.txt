@@ -1,0 +1,201 @@
+1. First, understand your project
+Project name: Academic Integrity & Similarity Case Management System
+
+In simple words:
+
+Imagine a college where thousands of students submit assignments.
+
+Sometimes students copy content from websites, other students or existing documents.
+
+Your system helps the college:
+- Check how similar student assignments are.
+- Identify assignments that need investigation.
+- Assign teachers or reviewers to investigate.
+- Store proof and evidence.
+- Record the final decision.
+- Allow students to appeal if they disagree.
+The most important point: Your system does not automatically punish students based on similarity percentage. A human reviewer investigates before making a decision.
+2. How does your project work?
+
+Imagine a student named Rahul submits an assignment.
+Example: Rahul submits an assignment
+1. Student submits assignment
+   
+   Rahul uploads his assignment to the system.
+2. Similarity checking
+   
+   The system checks how much content matches other sources.
+   78%
+   Example similarity score
+3. Create a flag
+   
+   Because the score is high, the system creates a flag saying this submission needs checking.
+4. Create a case
+   
+   The administrator creates an investigation case.
+5. Assign a reviewer
+   
+   The system checks whether a teacher is available and has no conflict of interest.
+6. Check evidence
+   
+   The reviewer checks the matching content, quotations and other evidence.
+7. Make a decision
+   
+   The reviewer records the decision and explains why.
+8. Student can appeal
+   
+   If Rahul disagrees, he can request another review by an independent reviewer.
+9. Save the history
+   
+   The system stores what happened at every stage.
+
+That's the complete business workflow of your project.
+3. What technologies did you use?
+Understand these simple explanations.
+Technology	Why did you use it?
+React	To build the user interface
+TypeScript	To write safer frontend code
+Python	To implement backend logic
+FastAPI	To create APIs
+MySQL	To store project information
+SQLAlchemy	To connect Python classes with database tables
+Pydantic	To validate API data
+Pytest	To test whether the backend works
+
+4. Understand the database
+Your database contains different tables. Each table stores a particular type of information.
+Table	Simple meaning
+Learner	Student details
+Assessment	Assignment or examination details
+Submission	Student's uploaded assignment
+SimilarityReport	Similarity checking result
+IntegrityRule	Rules for deciding which scores need review
+Flag	Warning that a submission needs attention
+Case	Investigation record
+Reviewer	Teacher or investigator details
+EvidenceItem	Proof collected during investigation
+CaseDecision	Final human decision
+Appeal	Student's request to review the decision
+
+For example:
+- One learner can submit multiple assignments.
+- One assessment can have multiple submissions.
+- One case can have multiple evidence records.
+- One case can have multiple timeline events.
+- One decision can have an appeal.
+5. What is special about your project?
+An interviewer may ask: "What makes your project different?"
+
+You can explain three important features.
+
+1. Reviewer conflict checking
+
+Suppose a teacher has a personal connection with a student.
+
+Your system checks conflicts before assigning that teacher to the case.
+
+2. Evidence history
+
+Suppose a reviewer makes a decision today and someone adds new evidence tomorrow.
+
+Your system should preserve the original decision and its evidence snapshot. It should not silently change the old record.
+
+3. Independent appeal
+
+Suppose Teacher A made the original decision.
+
+The appeal should be reviewed by another eligible reviewer, not Teacher A.
+
+These features help make the system fair and transparent.
+6. What is synthetic data generation?
+This is another important part of your project.
+
+You need a large amount of test data, but you cannot use real students' private information.
+
+So you generate fake student and assignment records using Python.
+
+Your target dataset is:
+10,000
+Submissions
+
+
+1,000
+Flags
+
+
+300
+Cases
+
+
+20261022
+Fixed random seed
+
+
+
+A fixed seed means that when you run the generator again with the same settings, it produces the same dataset.
+
+You also include four special test scenarios:
+1. A flag incorrectly treated as proof of guilt.
+2. A reviewer who has a conflict of interest.
+3. Evidence added after a decision without maintaining history.
+4. An appeal closed without independent review.
+You store these expected scenarios separately in ground truth so that you can check whether your system handles them correctly.
+7. Interview answer — very short version
+If the interviewer asks, "Explain your project," say this:
+My project is an Academic Integrity and Similarity Case Management System.
+
+The main purpose of this project is to help colleges manage student assignment similarity checks and academic misconduct investigations.
+
+When a student submits an assignment, the system generates a similarity report. If the similarity score crosses a configured threshold, the system creates a flag for human review.
+
+An administrator can create an investigation case and assign a reviewer. The reviewer checks the evidence and records a decision with a proper explanation.
+
+If the student disagrees with the decision, they can submit an appeal, which must be reviewed independently.
+
+I developed the backend using Python and FastAPI, the frontend using React and TypeScript, and I used MySQL with SQLAlchemy for database management.
+
+I also designed a Python synthetic data generator to create large amounts of test data and validate relationships, business rules and exceptional scenarios.
+
+The main focus of my project is fairness, evidence management, traceability and proper human decision-making.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+My project uses a relational database architecture with MySQL.
+
+I divided the database into multiple related tables, such as Learner, Assessment, Submission, Similarity Report, Case, Reviewer, Evidence, Decision and Appeal.
+
+I used primary keys and foreign keys to maintain relationships between tables and avoid duplicate data.
+
+For example, one learner can have multiple submissions, and each submission can have similarity reports.
+
+I also used separate tables to manage case assignments, evidence, decisions and appeals.
+
+One important feature is maintaining event history so that important changes are traceable instead of simply overwriting previous records.
+
+This database design helps maintain data consistency, transparency and proper investigation workflow.

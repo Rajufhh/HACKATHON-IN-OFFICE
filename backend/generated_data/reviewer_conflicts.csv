@@ -1,0 +1,32 @@
+id,reviewer_id,case_id,conflict_type,reason,status,declared_at,reviewed_at,reviewed_by,review_notes
+1,9,2,ACADEMIC,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-04-21 22:19:00,,,
+2,15,10,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-06-06 11:25:00,2026-06-06 11:30:00,1,Synthetic conflict record retained for audit.
+3,1,20,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-04-23 03:20:00,2026-04-23 03:25:00,1,Synthetic conflict record retained for audit.
+4,11,30,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-02-23 01:13:00,2026-02-23 01:18:00,1,Synthetic conflict record retained for audit.
+5,21,40,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-01-31 06:54:00,2026-01-31 06:59:00,1,Synthetic conflict record retained for audit.
+6,7,50,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-06-27 18:08:00,2026-06-27 18:13:00,1,Synthetic conflict record retained for audit.
+7,17,60,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-02-18 08:08:00,2026-02-18 08:13:00,1,Synthetic conflict record retained for audit.
+8,3,70,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-06-17 08:35:00,2026-06-17 08:40:00,1,Synthetic conflict record retained for audit.
+9,13,80,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-04-25 04:46:00,2026-04-25 04:51:00,1,Synthetic conflict record retained for audit.
+10,23,90,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-03-16 21:59:00,2026-03-16 22:04:00,1,Synthetic conflict record retained for audit.
+11,9,100,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-01-11 00:34:00,2026-01-11 00:39:00,1,Synthetic conflict record retained for audit.
+12,19,110,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-06-14 11:49:00,2026-06-14 11:54:00,1,Synthetic conflict record retained for audit.
+13,5,120,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-04-05 07:06:00,2026-04-05 07:11:00,1,Synthetic conflict record retained for audit.
+14,15,130,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-04-26 21:02:00,2026-04-26 21:07:00,1,Synthetic conflict record retained for audit.
+15,1,140,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-02-12 08:10:00,2026-02-12 08:15:00,1,Synthetic conflict record retained for audit.
+16,11,150,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-03-01 21:14:00,2026-03-01 21:19:00,1,Synthetic conflict record retained for audit.
+17,21,160,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-05-13 01:00:00,2026-05-13 01:05:00,1,Synthetic conflict record retained for audit.
+18,7,170,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-03-07 00:09:00,2026-03-07 00:14:00,1,Synthetic conflict record retained for audit.
+19,17,180,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-03-03 11:27:00,2026-03-03 11:32:00,1,Synthetic conflict record retained for audit.
+20,3,190,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-05-18 17:48:00,2026-05-18 17:53:00,1,Synthetic conflict record retained for audit.
+21,13,200,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-01-16 04:49:00,2026-01-16 04:54:00,1,Synthetic conflict record retained for audit.
+22,23,210,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-02-25 01:39:00,2026-02-25 01:44:00,1,Synthetic conflict record retained for audit.
+23,9,220,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-04-16 03:39:00,2026-04-16 03:44:00,1,Synthetic conflict record retained for audit.
+24,19,230,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-04-11 04:14:00,2026-04-11 04:19:00,1,Synthetic conflict record retained for audit.
+25,5,240,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-06-14 13:59:00,2026-06-14 14:04:00,1,Synthetic conflict record retained for audit.
+26,15,250,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-03-16 07:56:00,2026-03-16 08:01:00,1,Synthetic conflict record retained for audit.
+27,1,260,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-05-04 08:13:00,2026-05-04 08:18:00,1,Synthetic conflict record retained for audit.
+28,11,270,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-06-17 11:55:00,2026-06-17 12:00:00,1,Synthetic conflict record retained for audit.
+29,21,280,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-02-08 17:21:00,2026-02-08 17:26:00,1,Synthetic conflict record retained for audit.
+30,7,290,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,CONFIRMED,2026-06-04 04:56:00,2026-06-04 05:01:00,1,Synthetic conflict record retained for audit.
+31,17,300,PROFESSIONAL,Synthetic disclosed conflict; no real relationship is represented.,PENDING,2026-06-24 00:26:00,2026-06-24 00:31:00,1,Synthetic conflict record retained for audit.

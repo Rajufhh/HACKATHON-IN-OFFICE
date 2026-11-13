@@ -1,0 +1,301 @@
+id,decision_code,case_id,reviewer_id,outcome,rationale,decided_at
+1,DEC-2026-000001,1,1,BREACH_ESTABLISHED,"INJECTED ANOMALY: the similarity flag was treated as conclusive proof of guilt, without independent evidence evaluation.",2026-03-19 14:34:00
+2,DEC-2026-000002,2,9,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-22 02:14:00
+3,DEC-2026-000003,3,3,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-04-14 03:31:00
+4,DEC-2026-000004,4,4,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-02-08 05:57:00
+5,DEC-2026-000005,5,5,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-31 03:14:00
+6,DEC-2026-000006,6,6,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-19 03:56:00
+7,DEC-2026-000007,7,7,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-27 21:37:00
+8,DEC-2026-000008,8,8,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-02-24 17:12:00
+9,DEC-2026-000009,9,9,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-05-19 00:42:00
+10,DEC-2026-000010,10,10,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-06 15:20:00
+11,DEC-2026-000011,11,11,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-20 01:40:00
+12,DEC-2026-000012,12,12,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-01 22:04:00
+13,DEC-2026-000013,13,13,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-06 13:27:00
+14,DEC-2026-000014,14,14,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-10 01:20:00
+15,DEC-2026-000015,15,15,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-04-18 18:18:00
+16,DEC-2026-000016,16,16,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-03-17 00:40:00
+17,DEC-2026-000017,17,17,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-30 01:43:00
+18,DEC-2026-000018,18,18,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-01-23 16:26:00
+19,DEC-2026-000019,19,19,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-15 10:00:00
+20,DEC-2026-000020,20,20,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-04-23 07:15:00
+21,DEC-2026-000021,21,21,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-02-26 23:51:00
+22,DEC-2026-000022,22,22,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-23 02:47:00
+23,DEC-2026-000023,23,23,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-02-10 17:25:00
+24,DEC-2026-000024,24,24,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-06-19 16:53:00
+25,DEC-2026-000025,25,1,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-02-16 11:02:00
+26,DEC-2026-000026,26,2,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-22 14:08:00
+27,DEC-2026-000027,27,3,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-20 12:00:00
+28,DEC-2026-000028,28,4,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-26 03:15:00
+29,DEC-2026-000029,29,5,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-03-09 11:09:00
+30,DEC-2026-000030,30,6,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-02-23 05:08:00
+31,DEC-2026-000031,31,7,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-02-13 11:59:00
+32,DEC-2026-000032,32,8,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-21 23:44:00
+33,DEC-2026-000033,33,9,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-01-09 16:39:00
+34,DEC-2026-000034,34,10,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-03-06 00:05:00
+35,DEC-2026-000035,35,11,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-07 17:45:00
+36,DEC-2026-000036,36,12,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-05-20 22:35:00
+37,DEC-2026-000037,37,13,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-07-01 05:59:00
+38,DEC-2026-000038,38,14,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-05-05 01:09:00
+39,DEC-2026-000039,39,15,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-05-17 09:46:00
+40,DEC-2026-000040,40,16,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-31 10:49:00
+41,DEC-2026-000041,41,17,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-28 23:37:00
+42,DEC-2026-000042,42,18,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-06 05:09:00
+43,DEC-2026-000043,43,19,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-02-20 00:12:00
+44,DEC-2026-000044,44,20,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-11 15:29:00
+45,DEC-2026-000045,45,21,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-05-18 02:35:00
+46,DEC-2026-000046,46,22,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-04-21 14:58:00
+47,DEC-2026-000047,47,23,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-27 01:04:00
+48,DEC-2026-000048,48,24,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-08 19:24:00
+49,DEC-2026-000049,49,1,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-03-26 01:40:00
+50,DEC-2026-000050,50,2,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-27 22:03:00
+51,DEC-2026-000051,51,3,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-05-07 15:31:00
+52,DEC-2026-000052,52,4,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-05-23 22:00:00
+53,DEC-2026-000053,53,5,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-28 02:10:00
+54,DEC-2026-000054,54,6,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-01 19:46:00
+55,DEC-2026-000055,55,7,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-14 11:53:00
+56,DEC-2026-000056,56,8,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-16 18:33:00
+57,DEC-2026-000057,57,9,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-06-19 23:26:00
+58,DEC-2026-000058,58,10,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-03-10 04:21:00
+59,DEC-2026-000059,59,11,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-07-01 09:21:00
+60,DEC-2026-000060,60,12,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-02-18 12:03:00
+61,DEC-2026-000061,61,13,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-06-10 06:20:00
+62,DEC-2026-000062,62,14,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-16 10:39:00
+63,DEC-2026-000063,63,15,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-03-28 19:03:00
+64,DEC-2026-000064,64,16,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-31 18:13:00
+65,DEC-2026-000065,65,17,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-02-26 13:52:00
+66,DEC-2026-000066,66,18,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-26 17:53:00
+67,DEC-2026-000067,67,19,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-03-22 13:06:00
+68,DEC-2026-000068,68,20,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-23 11:03:00
+69,DEC-2026-000069,69,21,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-04-28 07:39:00
+70,DEC-2026-000070,70,22,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-06-17 12:30:00
+71,DEC-2026-000071,71,23,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-23 01:49:00
+72,DEC-2026-000072,72,24,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-01-06 04:26:00
+73,DEC-2026-000073,73,1,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-11 08:15:00
+74,DEC-2026-000074,74,2,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-28 11:31:00
+75,DEC-2026-000075,75,3,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-04-02 21:50:00
+76,DEC-2026-000076,76,4,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-20 00:49:00
+77,DEC-2026-000077,77,5,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-19 01:50:00
+78,DEC-2026-000078,78,6,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-06-29 09:14:00
+79,DEC-2026-000079,79,7,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-29 12:15:00
+80,DEC-2026-000080,80,8,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-25 08:41:00
+81,DEC-2026-000081,81,9,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-01-14 06:19:00
+82,DEC-2026-000082,82,10,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-23 16:00:00
+83,DEC-2026-000083,83,11,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-26 21:40:00
+84,DEC-2026-000084,84,12,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-07-01 09:46:00
+85,DEC-2026-000085,85,13,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-05-04 00:13:00
+86,DEC-2026-000086,86,14,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-05-24 18:17:00
+87,DEC-2026-000087,87,15,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-05-02 22:32:00
+88,DEC-2026-000088,88,16,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-22 03:23:00
+89,DEC-2026-000089,89,17,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-22 09:41:00
+90,DEC-2026-000090,90,18,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-03-17 01:54:00
+91,DEC-2026-000091,91,19,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-03 05:36:00
+92,DEC-2026-000092,92,20,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-03-01 10:28:00
+93,DEC-2026-000093,93,21,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-15 10:31:00
+94,DEC-2026-000094,94,22,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-15 10:15:00
+95,DEC-2026-000095,95,23,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-02-10 21:37:00
+96,DEC-2026-000096,96,24,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-04 00:41:00
+97,DEC-2026-000097,97,1,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-03-26 05:28:00
+98,DEC-2026-000098,98,2,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-12 21:06:00
+99,DEC-2026-000099,99,3,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-05-23 03:04:00
+100,DEC-2026-000100,100,4,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-11 04:29:00
+101,DEC-2026-000101,101,5,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-04 06:46:00
+102,DEC-2026-000102,102,6,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-05-04 00:30:00
+103,DEC-2026-000103,103,7,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-05-01 01:22:00
+104,DEC-2026-000104,104,8,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-03-13 17:59:00
+105,DEC-2026-000105,105,9,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-01-19 06:18:00
+106,DEC-2026-000106,106,10,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-18 02:49:00
+107,DEC-2026-000107,107,11,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-01-24 11:55:00
+108,DEC-2026-000108,108,12,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-19 08:38:00
+109,DEC-2026-000109,109,13,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-01-17 02:56:00
+110,DEC-2026-000110,110,14,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-14 15:44:00
+111,DEC-2026-000111,111,15,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-04-13 00:36:00
+112,DEC-2026-000112,112,16,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-29 07:05:00
+113,DEC-2026-000113,113,17,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-10 07:12:00
+114,DEC-2026-000114,114,18,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-24 02:19:00
+115,DEC-2026-000115,115,19,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-04-23 11:50:00
+116,DEC-2026-000116,116,20,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-28 00:13:00
+117,DEC-2026-000117,117,21,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-19 19:30:00
+118,DEC-2026-000118,118,22,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-07 14:25:00
+119,DEC-2026-000119,119,23,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-04-02 14:51:00
+120,DEC-2026-000120,120,24,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-04-05 11:01:00
+121,DEC-2026-000121,121,1,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-26 19:18:00
+122,DEC-2026-000122,122,2,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-05-04 09:50:00
+123,DEC-2026-000123,123,3,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-01-27 16:03:00
+124,DEC-2026-000124,124,4,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-01-04 13:52:00
+125,DEC-2026-000125,125,5,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-31 11:31:00
+126,DEC-2026-000126,126,6,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-01-20 08:22:00
+127,DEC-2026-000127,127,7,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-02-16 06:44:00
+128,DEC-2026-000128,128,8,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-06-25 00:12:00
+129,DEC-2026-000129,129,9,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-03 02:31:00
+130,DEC-2026-000130,130,10,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-27 00:57:00
+131,DEC-2026-000131,131,11,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-01-23 15:19:00
+132,DEC-2026-000132,132,12,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-02-19 11:58:00
+133,DEC-2026-000133,133,13,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-16 06:07:00
+134,DEC-2026-000134,134,14,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-03-09 06:54:00
+135,DEC-2026-000135,135,15,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-02-16 17:35:00
+136,DEC-2026-000136,136,16,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-02-13 18:27:00
+137,DEC-2026-000137,137,17,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-05-05 05:48:00
+138,DEC-2026-000138,138,18,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-01-03 09:23:00
+139,DEC-2026-000139,139,19,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-07 09:33:00
+140,DEC-2026-000140,140,20,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-02-12 12:05:00
+141,DEC-2026-000141,141,21,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-06-01 17:56:00
+142,DEC-2026-000142,142,22,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-19 00:55:00
+143,DEC-2026-000143,143,23,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-19 00:13:00
+144,DEC-2026-000144,144,24,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-06-25 06:28:00
+145,DEC-2026-000145,145,1,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-02-24 11:46:00
+146,DEC-2026-000146,146,2,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-26 13:00:00
+147,DEC-2026-000147,147,3,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-05-17 19:17:00
+148,DEC-2026-000148,148,4,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-02-10 08:47:00
+149,DEC-2026-000149,149,5,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-05-16 23:36:00
+150,DEC-2026-000150,150,6,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-03-02 01:09:00
+151,DEC-2026-000151,151,7,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-26 20:05:00
+152,DEC-2026-000152,152,8,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-04 03:50:00
+153,DEC-2026-000153,153,9,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-02-20 02:02:00
+154,DEC-2026-000154,154,10,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-08 01:44:00
+155,DEC-2026-000155,155,11,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-07 11:45:00
+156,DEC-2026-000156,156,12,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-02-28 20:32:00
+157,DEC-2026-000157,157,13,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-10 01:56:00
+158,DEC-2026-000158,158,14,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-05-24 14:46:00
+159,DEC-2026-000159,159,15,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-06-23 20:00:00
+160,DEC-2026-000160,160,16,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-05-13 04:55:00
+161,DEC-2026-000161,161,17,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-10 16:47:00
+162,DEC-2026-000162,162,18,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-04-21 06:11:00
+163,DEC-2026-000163,163,19,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-10 09:49:00
+164,DEC-2026-000164,164,20,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-01-20 06:00:00
+165,DEC-2026-000165,165,21,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-03-13 08:17:00
+166,DEC-2026-000166,166,22,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-27 12:03:00
+167,DEC-2026-000167,167,23,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-02-08 11:40:00
+168,DEC-2026-000168,168,24,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-06 04:32:00
+169,DEC-2026-000169,169,1,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-05-29 05:32:00
+170,DEC-2026-000170,170,2,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-07 04:04:00
+171,DEC-2026-000171,171,3,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-31 06:17:00
+172,DEC-2026-000172,172,4,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-05-05 09:23:00
+173,DEC-2026-000173,173,5,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-12 11:55:00
+174,DEC-2026-000174,174,6,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-06 10:21:00
+175,DEC-2026-000175,175,7,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-02-28 20:51:00
+176,DEC-2026-000176,176,8,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-29 21:35:00
+177,DEC-2026-000177,177,9,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-03 06:19:00
+178,DEC-2026-000178,178,10,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-01-09 14:21:00
+179,DEC-2026-000179,179,11,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-14 23:40:00
+180,DEC-2026-000180,180,12,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-03 15:22:00
+181,DEC-2026-000181,181,13,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-21 12:30:00
+182,DEC-2026-000182,182,14,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-18 02:52:00
+183,DEC-2026-000183,183,15,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-05-19 17:19:00
+184,DEC-2026-000184,184,16,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-03-24 23:12:00
+185,DEC-2026-000185,185,17,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-03-14 01:20:00
+186,DEC-2026-000186,186,18,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-03-06 08:37:00
+187,DEC-2026-000187,187,19,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-24 12:32:00
+188,DEC-2026-000188,188,20,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-12 08:53:00
+189,DEC-2026-000189,189,21,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-04-10 02:45:00
+190,DEC-2026-000190,190,22,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-18 21:43:00
+191,DEC-2026-000191,191,23,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-01-21 08:10:00
+192,DEC-2026-000192,192,24,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-01-15 12:53:00
+193,DEC-2026-000193,193,1,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-07 21:10:00
+194,DEC-2026-000194,194,2,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-03 03:19:00
+195,DEC-2026-000195,195,3,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-06-05 11:59:00
+196,DEC-2026-000196,196,4,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-24 08:54:00
+197,DEC-2026-000197,197,5,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-01-29 07:00:00
+198,DEC-2026-000198,198,6,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-06-05 03:02:00
+199,DEC-2026-000199,199,7,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-22 11:14:00
+200,DEC-2026-000200,200,8,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-01-16 08:44:00
+201,DEC-2026-000201,201,9,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-03-26 13:12:00
+202,DEC-2026-000202,202,10,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-06-02 03:57:00
+203,DEC-2026-000203,203,11,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-01-11 19:55:00
+204,DEC-2026-000204,204,12,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-06-10 05:43:00
+205,DEC-2026-000205,205,13,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-12 03:27:00
+206,DEC-2026-000206,206,14,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-26 07:00:00
+207,DEC-2026-000207,207,15,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-02-10 17:29:00
+208,DEC-2026-000208,208,16,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-03-17 15:52:00
+209,DEC-2026-000209,209,17,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-12 13:18:00
+210,DEC-2026-000210,210,18,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-02-25 05:34:00
+211,DEC-2026-000211,211,19,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-03 03:53:00
+212,DEC-2026-000212,212,20,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-03-18 11:39:00
+213,DEC-2026-000213,213,21,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-04-02 10:25:00
+214,DEC-2026-000214,214,22,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-23 04:59:00
+215,DEC-2026-000215,215,23,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-03-08 23:15:00
+216,DEC-2026-000216,216,24,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-05-18 08:26:00
+217,DEC-2026-000217,217,1,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-01 05:29:00
+218,DEC-2026-000218,218,2,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-06-10 05:57:00
+219,DEC-2026-000219,219,3,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-20 00:12:00
+220,DEC-2026-000220,220,4,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-16 07:34:00
+221,DEC-2026-000221,221,5,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-13 17:39:00
+222,DEC-2026-000222,222,6,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-06-13 02:10:00
+223,DEC-2026-000223,223,7,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-03-25 22:34:00
+224,DEC-2026-000224,224,8,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-02-09 14:20:00
+225,DEC-2026-000225,225,9,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-03 07:07:00
+226,DEC-2026-000226,226,10,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-27 05:16:00
+227,DEC-2026-000227,227,11,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-03-14 11:02:00
+228,DEC-2026-000228,228,12,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-10 23:07:00
+229,DEC-2026-000229,229,13,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-05-15 17:13:00
+230,DEC-2026-000230,230,14,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-04-11 08:09:00
+231,DEC-2026-000231,231,15,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-04-25 21:55:00
+232,DEC-2026-000232,232,16,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-02-21 11:04:00
+233,DEC-2026-000233,233,17,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-02-03 04:11:00
+234,DEC-2026-000234,234,18,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-05-12 07:26:00
+235,DEC-2026-000235,235,19,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-28 14:12:00
+236,DEC-2026-000236,236,20,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-26 19:13:00
+237,DEC-2026-000237,237,21,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-01-15 10:38:00
+238,DEC-2026-000238,238,22,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-11 22:00:00
+239,DEC-2026-000239,239,23,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-15 15:57:00
+240,DEC-2026-000240,240,24,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-06-14 17:54:00
+241,DEC-2026-000241,241,1,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-11 11:50:00
+242,DEC-2026-000242,242,2,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-17 06:22:00
+243,DEC-2026-000243,243,3,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-03-17 21:10:00
+244,DEC-2026-000244,244,4,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-03-13 03:36:00
+245,DEC-2026-000245,245,5,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-23 08:47:00
+246,DEC-2026-000246,246,6,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-01-28 15:06:00
+247,DEC-2026-000247,247,7,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-03-25 00:15:00
+248,DEC-2026-000248,248,8,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-27 09:42:00
+249,DEC-2026-000249,249,9,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-05-26 21:26:00
+250,DEC-2026-000250,250,10,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-16 11:51:00
+251,DEC-2026-000251,251,11,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-22 23:53:00
+252,DEC-2026-000252,252,12,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-01-24 08:20:00
+253,DEC-2026-000253,253,13,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-03-01 23:52:00
+254,DEC-2026-000254,254,14,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-01-24 08:22:00
+255,DEC-2026-000255,255,15,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-02-03 10:33:00
+256,DEC-2026-000256,256,16,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-27 08:46:00
+257,DEC-2026-000257,257,17,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-24 09:38:00
+258,DEC-2026-000258,258,18,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-05-03 16:23:00
+259,DEC-2026-000259,259,19,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-05-28 02:19:00
+260,DEC-2026-000260,260,20,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-05-04 12:08:00
+261,DEC-2026-000261,261,21,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-06-14 21:15:00
+262,DEC-2026-000262,262,22,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-04-23 14:17:00
+263,DEC-2026-000263,263,23,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-23 02:48:00
+264,DEC-2026-000264,264,24,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-01-21 12:23:00
+265,DEC-2026-000265,265,1,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-18 23:58:00
+266,DEC-2026-000266,266,2,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-05-20 09:42:00
+267,DEC-2026-000267,267,3,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-05-24 10:35:00
+268,DEC-2026-000268,268,4,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-03 11:33:00
+269,DEC-2026-000269,269,5,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-02-19 18:58:00
+270,DEC-2026-000270,270,6,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-06-17 15:50:00
+271,DEC-2026-000271,271,7,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-15 15:42:00
+272,DEC-2026-000272,272,8,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-21 22:14:00
+273,DEC-2026-000273,273,9,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-06-28 21:29:00
+274,DEC-2026-000274,274,10,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-01-31 08:43:00
+275,DEC-2026-000275,275,11,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-23 20:00:00
+276,DEC-2026-000276,276,12,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-03-07 22:33:00
+277,DEC-2026-000277,277,13,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-01-15 22:01:00
+278,DEC-2026-000278,278,14,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-03-15 04:36:00
+279,DEC-2026-000279,279,15,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-02-26 02:26:00
+280,DEC-2026-000280,280,16,NO_BREACH,Human review did not find sufficient evidence of a breach.,2026-02-08 21:16:00
+281,DEC-2026-000281,281,17,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-05-09 03:04:00
+282,DEC-2026-000282,282,18,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-26 01:29:00
+283,DEC-2026-000283,283,19,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-03 01:18:00
+284,DEC-2026-000284,284,20,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-01-09 01:07:00
+285,DEC-2026-000285,285,21,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-06-07 13:55:00
+286,DEC-2026-000286,286,22,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-05-14 08:44:00
+287,DEC-2026-000287,287,23,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-11 08:49:00
+288,DEC-2026-000288,288,24,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-01-25 21:22:00
+289,DEC-2026-000289,289,1,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-06-01 06:41:00
+290,DEC-2026-000290,290,2,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-06-04 08:51:00
+291,DEC-2026-000291,291,3,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-04-29 23:47:00
+292,DEC-2026-000292,292,4,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-29 04:05:00
+293,DEC-2026-000293,293,5,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-02-08 01:46:00
+294,DEC-2026-000294,294,6,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-05-07 05:51:00
+295,DEC-2026-000295,295,7,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-04-07 14:22:00
+296,DEC-2026-000296,296,8,NO_BREACH,Human review found the observed overlap attributable to synthetic legitimate quotation or shared template material.,2026-04-05 01:57:00
+297,DEC-2026-000297,297,9,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-05-31 18:49:00
+298,DEC-2026-000298,298,10,BREACH_ESTABLISHED,Human review considered the synthetic source matches and learner explanation before recording this outcome.,2026-02-25 16:02:00
+299,DEC-2026-000299,299,11,INSUFFICIENT_EVIDENCE,The synthetic evidence is insufficient to establish a breach.,2026-04-06 03:43:00
+300,DEC-2026-000300,300,12,BREACH_ESTABLISHED,Synthetic reviewer error: legitimate quotation or template overlap was not adequately considered.,2026-06-24 04:21:00

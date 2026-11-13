@@ -1,0 +1,755 @@
+{
+  "Appeal": {
+    "cardinality": "One appeal per decision (unique FK); each appeal belongs to one learner, optionally has one assigned reviewer, and has many events/evidence snapshots.",
+    "effective_date_notes": "submitted_at, assigned_at, and resolved_at record workflow timing.",
+    "fields": {
+      "appeal_code": {
+        "allowed_values_or_validation": "APL-<case-id>-01",
+        "required": true,
+        "type": "string",
+        "unique": true,
+        "units": null
+      },
+      "assigned_at": {
+        "allowed_values_or_validation": "on or after submitted_at",
+        "required": false,
+        "type": "datetime|null",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "assigned_reviewer_id": {
+        "allowed_values_or_validation": "FK reviewers.id; must differ from original decision-maker",
+        "required": false,
+        "type": "integer|null",
+        "unique": false,
+        "units": null
+      },
+      "decision_id": {
+        "allowed_values_or_validation": "unique FK case_decisions.id",
+        "required": true,
+        "type": "integer",
+        "unique": true,
+        "units": null
+      },
+      "grounds": {
+        "allowed_values_or_validation": "10..10000 characters",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "id": {
+        "allowed_values_or_validation": "positive primary key",
+        "required": true,
+        "type": "integer",
+        "unique": true,
+        "units": null
+      },
+      "learner_id": {
+        "allowed_values_or_validation": "FK learners.id; must match case learner",
+        "required": true,
+        "type": "integer",
+        "unique": false,
+        "units": null
+      },
+      "outcome": {
+        "allowed_values_or_validation": "UPHELD|OVERTURNED|REMANDED; set only when DECIDED",
+        "required": false,
+        "type": "string|null",
+        "unique": false,
+        "units": null
+      },
+      "outcome_rationale": {
+        "allowed_values_or_validation": "10..10000 characters when resolved",
+        "required": false,
+        "type": "string|null",
+        "unique": false,
+        "units": null
+      },
+      "resolved_at": {
+        "allowed_values_or_validation": "on or after submitted_at",
+        "required": false,
+        "type": "datetime|null",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "status": {
+        "allowed_values_or_validation": "SUBMITTED|UNDER_REVIEW|DECIDED|WITHDRAWN",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "submitted_at": {
+        "allowed_values_or_validation": "after original decision",
+        "required": true,
+        "type": "datetime",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      }
+    },
+    "lifecycle_states": [
+      "SUBMITTED",
+      "UNDER_REVIEW",
+      "DECIDED",
+      "WITHDRAWN"
+    ],
+    "table": "appeals"
+  },
+  "Assessment": {
+    "cardinality": "One assessment has many submissions.",
+    "effective_date_notes": "No separate effective-date interval exists in the current model.",
+    "fields": {
+      "assessment_code": {
+        "allowed_values_or_validation": "ASM-2026-NNNNNN",
+        "required": true,
+        "type": "string",
+        "unique": true,
+        "units": null
+      },
+      "assessment_type": {
+        "allowed_values_or_validation": "ASSIGNMENT|PROJECT|EXAM",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "created_at": {
+        "allowed_values_or_validation": "2025-12-02 onward",
+        "required": true,
+        "type": "datetime",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "description": {
+        "allowed_values_or_validation": "synthetic provenance statement",
+        "required": false,
+        "type": "string|null",
+        "unique": false,
+        "units": null
+      },
+      "due_date": {
+        "allowed_values_or_validation": "after created_at",
+        "required": false,
+        "type": "datetime|null",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "id": {
+        "allowed_values_or_validation": "positive, unique primary key",
+        "required": true,
+        "type": "integer",
+        "unique": true,
+        "units": null
+      },
+      "max_marks": {
+        "allowed_values_or_validation": "positive",
+        "required": true,
+        "type": "integer",
+        "unique": false,
+        "units": "marks"
+      },
+      "status": {
+        "allowed_values_or_validation": "PUBLISHED",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "title": {
+        "allowed_values_or_validation": "non-empty synthetic title",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      }
+    },
+    "lifecycle_states": [
+      "DRAFT",
+      "PUBLISHED",
+      "ARCHIVED"
+    ],
+    "table": "assessments"
+  },
+  "Case": {
+    "cardinality": "A case belongs to one learner; CaseFlag is a bridge from case to flags (one case to many flags, each flag at most one case); a case has many events, evidence items, assignments, and decisions.",
+    "effective_date_notes": "Lifecycle timestamps are recorded where supported by the current model.",
+    "fields": {
+      "case_code": {
+        "allowed_values_or_validation": "CASE-2026-NNNNNN",
+        "required": true,
+        "type": "string",
+        "unique": true,
+        "units": null
+      },
+      "closed_at": {
+        "allowed_values_or_validation": "after decision time when CLOSED",
+        "required": false,
+        "type": "datetime|null",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "description": {
+        "allowed_values_or_validation": "states review is not a guilt finding",
+        "required": false,
+        "type": "string|null",
+        "unique": false,
+        "units": null
+      },
+      "id": {
+        "allowed_values_or_validation": "positive primary key",
+        "required": true,
+        "type": "integer",
+        "unique": true,
+        "units": null
+      },
+      "learner_id": {
+        "allowed_values_or_validation": "FK learners.id",
+        "required": true,
+        "type": "integer",
+        "unique": false,
+        "units": null
+      },
+      "opened_at": {
+        "allowed_values_or_validation": "after report analysis",
+        "required": true,
+        "type": "datetime",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "priority": {
+        "allowed_values_or_validation": "LOW|NORMAL|HIGH|URGENT",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "status": {
+        "allowed_values_or_validation": "OPEN|ASSIGNED|UNDER_REVIEW|DECISION_PENDING|CLOSED; injected anomalies documented separately",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "title": {
+        "allowed_values_or_validation": "non-empty",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      }
+    },
+    "lifecycle_states": [
+      "OPEN",
+      "ASSIGNED",
+      "UNDER_REVIEW",
+      "DECISION_PENDING",
+      "CLOSED"
+    ],
+    "table": "cases"
+  },
+  "Decision": {
+    "cardinality": "Each decision belongs to one case and one reviewer; DecisionEvidence links a decision to many evidence items with decision-time snapshots.",
+    "effective_date_notes": "decided_at is the decision effective timestamp.",
+    "fields": {
+      "case_id": {
+        "allowed_values_or_validation": "FK cases.id",
+        "required": true,
+        "type": "integer",
+        "unique": false,
+        "units": null
+      },
+      "decided_at": {
+        "allowed_values_or_validation": "after evidence reviewed and before case closure",
+        "required": true,
+        "type": "datetime",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "decision_code": {
+        "allowed_values_or_validation": "DEC-2026-NNNNNN",
+        "required": true,
+        "type": "string",
+        "unique": true,
+        "units": null
+      },
+      "id": {
+        "allowed_values_or_validation": "positive primary key",
+        "required": true,
+        "type": "integer",
+        "unique": true,
+        "units": null
+      },
+      "outcome": {
+        "allowed_values_or_validation": "BREACH_ESTABLISHED|NO_BREACH|INSUFFICIENT_EVIDENCE|REFERRED_FOR_FURTHER_REVIEW",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "rationale": {
+        "allowed_values_or_validation": "non-empty; anomaly rationale labelled",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "reviewer_id": {
+        "allowed_values_or_validation": "FK reviewers.id",
+        "required": true,
+        "type": "integer",
+        "unique": false,
+        "units": null
+      }
+    },
+    "lifecycle_states": [
+      "BREACH_ESTABLISHED",
+      "NO_BREACH",
+      "INSUFFICIENT_EVIDENCE",
+      "REFERRED_FOR_FURTHER_REVIEW"
+    ],
+    "table": "case_decisions"
+  },
+  "EvidenceItem": {
+    "cardinality": "Each evidence item belongs to one case; DecisionEvidence and AppealEvidence are bridges with immutable metadata snapshots.",
+    "effective_date_notes": "Lifecycle timestamps are recorded where supported by the current model.",
+    "fields": {
+      "added_at": {
+        "allowed_values_or_validation": "before decision except labelled anomaly",
+        "required": true,
+        "type": "datetime",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "added_by": {
+        "allowed_values_or_validation": "reviewer ID or null",
+        "required": false,
+        "type": "integer|null",
+        "unique": false,
+        "units": null
+      },
+      "case_id": {
+        "allowed_values_or_validation": "FK cases.id",
+        "required": true,
+        "type": "integer",
+        "unique": false,
+        "units": null
+      },
+      "collected_at": {
+        "allowed_values_or_validation": "not after added_at",
+        "required": false,
+        "type": "datetime|null",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "description": {
+        "allowed_values_or_validation": "synthetic provenance; no personal data",
+        "required": false,
+        "type": "string|null",
+        "unique": false,
+        "units": null
+      },
+      "evidence_code": {
+        "allowed_values_or_validation": "EVD-<case-id>-NNN",
+        "required": true,
+        "type": "string",
+        "unique": true,
+        "units": null
+      },
+      "evidence_type": {
+        "allowed_values_or_validation": "SIMILARITY_REPORT|EXPLANATION|OTHER",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "file_size_bytes": {
+        "allowed_values_or_validation": ">= 0",
+        "required": false,
+        "type": "integer|null",
+        "unique": false,
+        "units": "bytes"
+      },
+      "id": {
+        "allowed_values_or_validation": "positive primary key",
+        "required": true,
+        "type": "integer",
+        "unique": true,
+        "units": null
+      },
+      "mime_type": {
+        "allowed_values_or_validation": "application/json",
+        "required": false,
+        "type": "string|null",
+        "unique": false,
+        "units": null
+      },
+      "sha256_hash": {
+        "allowed_values_or_validation": "64-character SHA-256 hex",
+        "required": false,
+        "type": "string|null",
+        "unique": false,
+        "units": null
+      },
+      "source_reference": {
+        "allowed_values_or_validation": "synthetic:// URI only",
+        "required": false,
+        "type": "string|null",
+        "unique": false,
+        "units": null
+      },
+      "title": {
+        "allowed_values_or_validation": "non-empty synthetic description",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      }
+    },
+    "lifecycle_states": [
+      "APPENDED; metadata captured at added_at"
+    ],
+    "table": "evidence_items"
+  },
+  "IntegrityRule": {
+    "cardinality": "One rule applies to many flags; rule ranges do not overlap.",
+    "effective_date_notes": "The application model has created_at but no effective_from/effective_to. Synthetic rules are fixed for the dataset and do not claim historical validity.",
+    "fields": {
+      "action": {
+        "allowed_values_or_validation": "INFORMATION|REVIEW|PRIORITY_REVIEW",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "created_at": {
+        "allowed_values_or_validation": "synthetic fixed date",
+        "required": true,
+        "type": "datetime",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "description": {
+        "allowed_values_or_validation": "states review is not guilt",
+        "required": false,
+        "type": "string|null",
+        "unique": false,
+        "units": null
+      },
+      "id": {
+        "allowed_values_or_validation": "positive primary key",
+        "required": true,
+        "type": "integer",
+        "unique": true,
+        "units": null
+      },
+      "max_similarity": {
+        "allowed_values_or_validation": "0..100 inclusive; >= min_similarity",
+        "required": true,
+        "type": "integer",
+        "unique": false,
+        "units": "percentage points"
+      },
+      "min_similarity": {
+        "allowed_values_or_validation": "0..100 inclusive; <= max_similarity",
+        "required": true,
+        "type": "integer",
+        "unique": false,
+        "units": "percentage points"
+      },
+      "rule_code": {
+        "allowed_values_or_validation": "INT-2026-NNNNNN",
+        "required": true,
+        "type": "string",
+        "unique": true,
+        "units": null
+      },
+      "rule_name": {
+        "allowed_values_or_validation": "non-empty",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      }
+    },
+    "lifecycle_states": [
+      "INFORMATION",
+      "REVIEW",
+      "PRIORITY_REVIEW"
+    ],
+    "table": "integrity_rules"
+  },
+  "Learner": {
+    "cardinality": "One learner has many submissions, cases, and appeals.",
+    "effective_date_notes": "No separate effective-date interval exists in the current model.",
+    "fields": {
+      "department": {
+        "allowed_values_or_validation": "Computer Science|Mathematics|Engineering",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "email": {
+        "allowed_values_or_validation": "example.invalid domain",
+        "required": true,
+        "type": "string",
+        "unique": true,
+        "units": null
+      },
+      "id": {
+        "allowed_values_or_validation": "positive, unique primary key",
+        "required": true,
+        "type": "integer",
+        "unique": true,
+        "units": null
+      },
+      "learner_code": {
+        "allowed_values_or_validation": "LRN-2026-NNNNNN",
+        "required": true,
+        "type": "string",
+        "unique": true,
+        "units": null
+      },
+      "name": {
+        "allowed_values_or_validation": "synthetic display name",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "status": {
+        "allowed_values_or_validation": "ACTIVE",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      }
+    },
+    "lifecycle_states": [
+      "ACTIVE"
+    ],
+    "table": "learners"
+  },
+  "Reviewer": {
+    "cardinality": "One reviewer may have many case assignments, decisions, conflicts, and assigned appeals.",
+    "effective_date_notes": "Lifecycle timestamps are recorded where supported by the current model.",
+    "fields": {
+      "created_at": {
+        "allowed_values_or_validation": "synthetic fixed date",
+        "required": true,
+        "type": "datetime",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "department": {
+        "allowed_values_or_validation": "Computer Science|Mathematics|Engineering",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "email": {
+        "allowed_values_or_validation": "example.invalid domain",
+        "required": true,
+        "type": "string",
+        "unique": true,
+        "units": null
+      },
+      "full_name": {
+        "allowed_values_or_validation": "synthetic display name",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "id": {
+        "allowed_values_or_validation": "positive primary key",
+        "required": true,
+        "type": "integer",
+        "unique": true,
+        "units": null
+      },
+      "max_active_cases": {
+        "allowed_values_or_validation": "positive workload limit",
+        "required": true,
+        "type": "integer",
+        "unique": false,
+        "units": "active cases plus appeals"
+      },
+      "reviewer_code": {
+        "allowed_values_or_validation": "REV-2026-NNNNNN",
+        "required": true,
+        "type": "string",
+        "unique": true,
+        "units": null
+      },
+      "specialization": {
+        "allowed_values_or_validation": "synthetic review specialty",
+        "required": false,
+        "type": "string|null",
+        "unique": false,
+        "units": null
+      },
+      "status": {
+        "allowed_values_or_validation": "ACTIVE|ON_LEAVE|INACTIVE",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      }
+    },
+    "lifecycle_states": [
+      "ACTIVE",
+      "ON_LEAVE",
+      "INACTIVE"
+    ],
+    "table": "reviewers"
+  },
+  "SimilarityReport": {
+    "cardinality": "Each report belongs to one submission; one report has many source-match rows.",
+    "effective_date_notes": "No separate effective-date interval exists in the current model.",
+    "fields": {
+      "analyzed_at": {
+        "allowed_values_or_validation": "on or after submitted_at",
+        "required": true,
+        "type": "datetime",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "id": {
+        "allowed_values_or_validation": "positive primary key; matches submission ID in this synthetic dataset",
+        "required": true,
+        "type": "integer",
+        "unique": true,
+        "units": null
+      },
+      "internet_percentage": {
+        "allowed_values_or_validation": "0..overall_score; quotation + template + internet reconciles to overall_score",
+        "required": true,
+        "type": "decimal",
+        "unique": false,
+        "units": "percentage points"
+      },
+      "overall_score": {
+        "allowed_values_or_validation": "0..100; sum of source components",
+        "required": true,
+        "type": "decimal",
+        "unique": false,
+        "units": "percentage points"
+      },
+      "quotation_percentage": {
+        "allowed_values_or_validation": "0..overall_score",
+        "required": true,
+        "type": "decimal",
+        "unique": false,
+        "units": "percentage points"
+      },
+      "report_code": {
+        "allowed_values_or_validation": "SIM-<submission-id>-01",
+        "required": true,
+        "type": "string",
+        "unique": true,
+        "units": null
+      },
+      "status": {
+        "allowed_values_or_validation": "COMPLETED",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "submission_id": {
+        "allowed_values_or_validation": "FK submissions.id",
+        "required": true,
+        "type": "integer",
+        "unique": true,
+        "units": null
+      },
+      "template_percentage": {
+        "allowed_values_or_validation": "0..overall_score",
+        "required": true,
+        "type": "decimal",
+        "unique": false,
+        "units": "percentage points"
+      }
+    },
+    "lifecycle_states": [
+      "COMPLETED"
+    ],
+    "table": "similarity_reports"
+  },
+  "Submission": {
+    "cardinality": "Each submission belongs to one learner and one assessment; one submission has one report in this dataset.",
+    "effective_date_notes": "No separate effective-date interval exists in the current model.",
+    "fields": {
+      "assessment_id": {
+        "allowed_values_or_validation": "FK assessments.id",
+        "required": true,
+        "type": "integer",
+        "unique": false,
+        "units": null
+      },
+      "content_hash": {
+        "allowed_values_or_validation": "SHA-256 hex of synthetic token",
+        "required": false,
+        "type": "string|null",
+        "unique": false,
+        "units": null
+      },
+      "file_reference": {
+        "allowed_values_or_validation": "synthetic:// URI only",
+        "required": false,
+        "type": "string|null",
+        "unique": false,
+        "units": null
+      },
+      "id": {
+        "allowed_values_or_validation": "positive, unique primary key",
+        "required": true,
+        "type": "integer",
+        "unique": true,
+        "units": null
+      },
+      "learner_id": {
+        "allowed_values_or_validation": "FK learners.id",
+        "required": true,
+        "type": "integer",
+        "unique": false,
+        "units": null
+      },
+      "status": {
+        "allowed_values_or_validation": "SUBMITTED",
+        "required": true,
+        "type": "string",
+        "unique": false,
+        "units": null
+      },
+      "submission_code": {
+        "allowed_values_or_validation": "SUB-2026-NNNNNN",
+        "required": true,
+        "type": "string",
+        "unique": true,
+        "units": null
+      },
+      "submitted_at": {
+        "allowed_values_or_validation": "after assessment creation",
+        "required": true,
+        "type": "datetime",
+        "unique": false,
+        "units": "UTC-naive ISO datetime"
+      },
+      "version_number": {
+        "allowed_values_or_validation": ">= 1",
+        "required": true,
+        "type": "integer",
+        "unique": false,
+        "units": "version"
+      }
+    },
+    "lifecycle_states": [
+      "SUBMITTED"
+    ],
+    "table": "submissions"
+  }
+}
